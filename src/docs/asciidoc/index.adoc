@@ -1,0 +1,82 @@
+= SpringBoot-Mybatis Boilerplate
+Doc Writer <niceweather94@gmail.com>
+2019-08-21
+:appversion: 1.0.0
+:snippet: D:/repository/intellij-repository/springboot-mybatis-boilerplate/build/generated-snippets
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+
+[[introduction]]
+== 소개
+
+SpringBoot + Mybatis Boilerplate 에 해당하는 프로젝트이다. +
+작성된 문서는 {appversion} 버전을 따르고 있으며 API 기술 스택은 다음과 같다. +
+[horizontal]
+BASE:: Spring Boot
+DATABASE:: MySQL
+JDBC:: MyBatis Framework
+UNIT TEST:: Junit4
+DOCS:: Spring Rest Docs
+
+
+[[common]]
+== 공통 사항
+
+API에 관계없이 아래 사항을 지켜주셔야 합니다. +
+
+IMPORTANT: URL 처음부분에 `*api*` 를 붙혀줘야합니다. +
+For example `http://127.0.0.1:8080/api/divisions`
+
+NOTE: 이곳은 정보에 해당한다.
+
+=== Header
+
+|===
+| name | description
+
+| `token`
+| 인증 키
+
+| `version`
+| `각 API 별 버전정보`
+|===
+
+[[hello]]
+== API LIST
+
+=== DIVISION
+division 에 관한 API
+
+==== READ
+Request HTTP Example:
+include::{snippet}/divisions/get/http-request.adoc[]
+Response HTTP Example:
+include::{snippet}/divisions/get/http-response.adoc[]
+Response Fields:
+include::{snippet}/divisions/get/response-fields.adoc[]
+
+==== CREATE
+Request HTTP Example:
+include::{snippet}/divisions/post/http-request.adoc[]
+Request Parameters:
+include::{snippet}/divisions/post/request-fields.adoc[]
+Response HTTP Example:
+include::{snippet}/divisions/post/http-response.adoc[]
+
+==== UPDATE
+Request HTTP Example:
+include::{snippet}/divisions/update/http-request.adoc[]
+Request Parameters:
+include::{snippet}/divisions/update/request-fields.adoc[]
+Response HTTP Example:
+include::{snippet}/divisions/update/http-response.adoc[]
+
+==== DELETE
+Request HTTP Example:
+include::{snippet}/divisions/delete/http-request.adoc[]
+Response HTTP Example:
+include::{snippet}/divisions/delete/http-response.adoc[]

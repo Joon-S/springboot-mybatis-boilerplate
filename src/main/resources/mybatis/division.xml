@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joons.springboot.mapper.DivisionMapper">
+
+    <select id="findById" resultType="com.joons.springboot.model.Division">
+        select *
+        from division
+        where id = #{id} and alive = true
+    </select>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO division
+        (name, company_id, aws_option)
+        VALUES
+        (#{name}, #{company_id}, 3)
+    </insert>
+
+    <update id="update">
+        update division
+        set name = #{name}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        update division set alive = false where id = #{id}
+    </delete>
+
+</mapper>

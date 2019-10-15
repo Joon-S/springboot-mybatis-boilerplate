@@ -1,0 +1,36 @@
+spring:
+  datasource-one:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
+    jdbc-url : jdbc:mysql://127.0.0.1:3306/schema?autoReconnect=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: local
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /joons
+  tomcat:
+    uri-encoding: UTF-8
+
+logging:
+  level:
+    # root: warn
+    com.castpro.faceproserver.*: info
+    com.castpro.faceproserver.mapper.*: debug
+    jdbc.sqlonly: debug
+    jdbc.sqltiming: debug
+    jdbc.resultsettable: debug
+
+mybatis:
+  configuration:
+    default-scriptiong-language: com.joons.springboot.config.EnhanceMybatisLogDriver
