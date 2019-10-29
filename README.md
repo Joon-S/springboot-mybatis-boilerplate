@@ -1,5 +1,5 @@
 # SpringBoot Boilerplate
-[![build](https://img.shields.io/badge/Build-Success-success)](https://github.com/Joon-S/springboot-mybatis-boilerplate)
+[![Build Status](https://travis-ci.org/Joon-S/springboot-mybatis-boilerplate.svg?branch=master)](https://travis-ci.org/Joon-S/springboot-mybatis-boilerplate)
 [![build](https://img.shields.io/badge/Writer-JoonS-blue)](https://github.com/Joon-S)
 
 해당 프로젝트는 단순하게 __SpringBoot, MyBatis__ 으로 기초세팅이 된것이기 때문에 추가로 커스텀이나 세팅을 하고싶을경우에는 수정이 필요하다. 
