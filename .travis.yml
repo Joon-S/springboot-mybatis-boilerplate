@@ -1,4 +1,7 @@
+dist: xenial # Default
+
 language: java
+
 jdk:
   - openjdk11
 
