@@ -33,6 +33,8 @@ public class DataBaseConnector {
     public SqlSessionFactory oneSqlSessionFactory(@Qualifier("oneDataSource") DataSource oneDataSource, ApplicationContext applicationContext) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(oneDataSource);
+        // mybatis 에서 dto 클래슷 별칭을 설정해줬다면 여기서 세팅을 해줘야만한다.
+        // sqlSessionFactoryBean.setTypeAliasesPackage("com.joons.springboot.model");
         sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mybatis/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
